@@ -1,0 +1,45 @@
+ <html>
+     <!-- <body onload="window.setTimeout('document.getElementById(\'criimlaunch\').click();', 1000);"> -->
+        <body>
+
+        <!-- <script>
+           var e_m64 = "VkVSU0lPTiUyMEJVSUxEJTNEMTAxMCUyMFJFQ09SREVSJTNEQ1IlMEFVUkwlMjBHT1RPJTNEaHR0cHMlM0ElMkYlMkZ3d3cuYm9va3MuY29tLnR3JTJGcHJvZHVjdHMlMkZOMDAwNzk5NTE0JTNGc2xvYyUzRG1haW5fbWIlMEFUQUclMjBQT1MlM0QxJTIwVFlQRSUzRFNQQU4lMjBBVFRSJTNEVFhUJTNBJUU3JTlCJUI0JUU2JThFJUE1JUU3JUI1JTkwJUU1JUI4JUIzJTBBVEFHJTIwUE9TJTNEMSUyMFRZUEUlM0RBJTIwQVRUUiUzRElEJTNBaW5zaWRlX2NoZWNrb3V0JTBBVEFHJTIwUE9TJTNEMiUyMFRZUEUlM0RTUEFOJTIwQVRUUiUzRENMQVNTJTNBcmFkaW8tc3BhbiUwQVRBRyUyMFBPUyUzRDElMjBUWVBFJTNESU5QVVQlM0FSQURJTyUyMEZPUk0lM0RJRCUzQXBheW1lbnRfc3RlcDIlMjBBVFRSJTNESUQlM0FwbTAyJTBBVEFHJTIwUE9TJTNEMSUyMFRZUEUlM0RBJTIwQVRUUiUzRElEJTNBTmV4dE9uZQ==";
+        </script> -->
+<!-- 
+        <a id="criimlaunch" href="javascript:(function() {try{if(!/^(?:chrome|https?|file)/.test(location)){alert('iMacros: Open webpage to run a macro.');return;}
+           var macro = {};macro.source = decodeURIComponent(atob(e_m64));macro.name = 'MacroBookmarklet';
+           var evt = document.createEvent('CustomEvent');evt.initCustomEvent('iMacrosRunMacro', true, true, macro);
+           window.dispatchEvent(evt);}catch(e){alert('iMacros Bookmarklet error: '+e.toString());}}) ();">Launch iMacros</a> -->
+
+         run macro
+           <script>
+              const e_m64 = "VkVSU0lPTiUyMEJVSUxEJTNEMTAxMCUyMFJFQ09SREVSJTNEQ1IlMEFVUkwlMjBHT1RPJTNEaHR0cHMlM0ElMkYlMkZ3d3cuYm9va3MuY29tLnR3JTJGcHJvZHVjdHMlMkZOMDAwNzk5NTE0JTNGc2xvYyUzRG1haW5fbWIlMEFUQUclMjBQT1MlM0QxJTIwVFlQRSUzRFNQQU4lMjBBVFRSJTNEVFhUJTNBJUU3JTlCJUI0JUU2JThFJUE1JUU3JUI1JTkwJUU1JUI4JUIzJTBBVEFHJTIwUE9TJTNEMSUyMFRZUEUlM0RBJTIwQVRUUiUzRElEJTNBaW5zaWRlX2NoZWNrb3V0JTBBVEFHJTIwUE9TJTNEMiUyMFRZUEUlM0RTUEFOJTIwQVRUUiUzRENMQVNTJTNBcmFkaW8tc3BhbiUwQVRBRyUyMFBPUyUzRDElMjBUWVBFJTNESU5QVVQlM0FSQURJTyUyMEZPUk0lM0RJRCUzQXBheW1lbnRfc3RlcDIlMjBBVFRSJTNESUQlM0FwbTAyJTBBVEFHJTIwUE9TJTNEMSUyMFRZUEUlM0RBJTIwQVRUUiUzRElEJTNBTmV4dE9uZQ==";
+
+              function runMacro(){
+                 console.log('run macro')
+                  try{
+                     if(!/^(?:chrome|https?|file)/.test(location)) {
+                        alert('iMacros: Open webpage to run a macro.')
+                        return
+                     }
+
+                     const macro = {
+                        source: decodeURIComponent(atob(e_m64)),
+                        name: 'MacroBookmarklet'
+                     }
+
+                     const evt = document.createEvent('CustomEvent')
+                     evt.initCustomEvent('iMacrosRunMacro', true, true, macro)
+                     window.dispatchEvent(evt)                     
+                  }
+                  catch(e) {
+                     alert('iMacros Bookmarklet error: '+ e.toString())
+                  }
+              }
+
+              window.onload = function(){
+                 runMacro()
+              }
+           </script>
+     </body>
+ </html>

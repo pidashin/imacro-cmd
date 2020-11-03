@@ -1,0 +1,1 @@
+ "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" file:///C:/Users/user/Desktop/buymask.html
